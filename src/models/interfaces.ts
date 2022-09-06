@@ -10,4 +10,5 @@ export interface ICard {
   className?: string;
   children?: Children;
   title?: string;
+  enableHover?: string;
 }

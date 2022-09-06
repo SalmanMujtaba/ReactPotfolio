@@ -16,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-color: #d9bb99;
+  background-color: rgb(244, 244, 250);
   padding-left: 20px;
   padding-right: 20px;
 }
