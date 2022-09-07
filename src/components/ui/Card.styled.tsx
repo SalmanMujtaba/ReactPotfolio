@@ -3,20 +3,13 @@ import styled from "styled-components";
 
 const CardStyled = styled.div<{enableHover?: string}>`
   &.card {
-    min-width: var(--mini-card-width);
-    min-height: var(--mini-card-height);
+    min-width: var(--card-width);
+    min-height: var(--card-height);
     position: relative;
     border-radius: 16px;
     background-color: white;
     transition-duration: 200ms;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: column;
     padding: 32px 16px;
-    &:not(:first-child) {
-      margin-left: -130px;
-    }
   }
 /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%) */
 `;

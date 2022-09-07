@@ -2,13 +2,34 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle `
 :root {
-  --mini-card-height: 350px;
-  --mini-card-width: 300px;
+  --card-height: 350px;
+  --card-width: 300px;
+  --icon-size: 50px;
+  --background-color: rgb(244, 244, 250);
+  --max-content-width: 1280px;
 }
 
 .flex {
   display: flex;
 }
+
+.icon-button {
+  background-color: transparent;
+  height: var(--icon-size);
+  width: var(--icon-size);
+  border: none;
+}
+
+.full-width {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.full-width__inner-container {
+  margin: 0 auto;
+  max-width: var(--max-content-width);
+}
+
 
 body {
   margin: 0;
@@ -16,7 +37,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-color: rgb(244, 244, 250);
+  background-color: var(--background-color);
   padding-left: 20px;
   padding-right: 20px;
 }

@@ -15,6 +15,14 @@ const PortfolioStyled = styled.main`
     place-content: center;
   }
 `;
+
+const Container = styled.div`
+  &.app-container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+`;
+
 const Portfolio = ()=>{
   return(
     <PortfolioStyled>
@@ -27,7 +35,9 @@ const Portfolio = ()=>{
       </div>
         <BackgroundImage imageURL={wallpaper}></BackgroundImage>
       </section>
-      <CardsContainer></CardsContainer>
+      <Container className="app-container">
+        <CardsContainer></CardsContainer>
+      </Container>
       </main>
     </PortfolioStyled>
   );
