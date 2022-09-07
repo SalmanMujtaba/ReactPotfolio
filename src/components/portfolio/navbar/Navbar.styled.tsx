@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 const NavbarStyled = styled.nav`
-  padding-top: 10px;
+  height: 2rem;
   position: fixed;
   top: 0;
   z-index: 10;
+  background-color: var(--background-color);
+  width: 100vw;
+  transition: background-color .5s ease-in-out,padding .5s ease-in-out;
   & ul {
     display: flex;
     list-style: none;
@@ -14,17 +17,15 @@ const NavbarStyled = styled.nav`
   }
 `;
 
-const Navbar = () => {
+const Navbar: React.FC<{className?: string}> = (props) => {
 
   return (
-      <NavbarStyled>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Else</li>
-          </ul>
-        </nav>
+      <NavbarStyled className={props.className}>
+        <ul>
+          <li>Home</li>
+          <li>Projects</li>
+          <li>Else</li>
+        </ul>
       </NavbarStyled>
   );
 }

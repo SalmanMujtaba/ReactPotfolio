@@ -4,7 +4,7 @@ import nextSVG from '../../../../assets/images/right-arrow-svgrepo-com.svg';
 import prevSVG from '../../../../assets/images/left-arrow-svgrepo-com.svg';
 import styled from "styled-components";
 import { useState } from "react";
-import useWindowDimensions from "src/utlis/window-size.util.";
+import useWindowDimensions from "src/utlis/get-dimensions.util.";
 
 let offset = 288;
 let maxShift = 1800;
