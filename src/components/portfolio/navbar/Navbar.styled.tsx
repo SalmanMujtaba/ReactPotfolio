@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 const NavbarStyled = styled.nav`
-  margin-top: 20px;
-  position: sticky;
+  padding-top: 10px;
+  position: fixed;
   top: 0;
+  z-index: 10;
   & ul {
     display: flex;
     list-style: none;

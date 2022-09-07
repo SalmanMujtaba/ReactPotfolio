@@ -13,9 +13,9 @@ const BackgroundImageStyled = styled.div<{imageURL: string}>`
 
 
 
-const BackgroundImage: React.FC<{imageURL: string}> = (props)=> {
+const BackgroundImage: React.FC<{imageURL: string, className?: string}> = (props)=> {
   return (
-    <BackgroundImageStyled imageURL={props.imageURL}>
+    <BackgroundImageStyled className={props.className} imageURL={props.imageURL}>
     </BackgroundImageStyled>
   );
 }

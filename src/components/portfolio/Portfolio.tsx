@@ -1,19 +1,8 @@
-import BackgroundImage from "../navbar/BackgroundImage.styled";
-import CardsContainer from "../projects/cards-container/CardsContainer.styled";
-import Navbar from "../navbar/Navbar.styled";
+import CardsContainer from "./projects/cards-container/CardsContainer.styled";
+import Header from "./header/Header.styled";
 import styled from "styled-components";
-import wallpaper from "../../assets/images/about_me.jpg";
 const PortfolioStyled = styled.main`
-  & .header-image {
-    display: grid;
-    grid-template-columns: 1fr 1fr;;
-  }
-  & .header-text {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    place-content: center;
-  }
+
 `;
 
 const Container = styled.div`
@@ -26,18 +15,11 @@ const Container = styled.div`
 const Portfolio = ()=>{
   return(
     <PortfolioStyled>
-      <Navbar></Navbar>
+      <Header></Header>
       <main>
-      <section className="header-image">
-      <div className="header-text">        
-          <h1>Salman Mujtaba</h1>
-          <h2>Full Stack Developer</h2>
-      </div>
-        <BackgroundImage imageURL={wallpaper}></BackgroundImage>
-      </section>
-      <Container className="app-container">
-        <CardsContainer></CardsContainer>
-      </Container>
+        <Container className="app-container">
+          <CardsContainer></CardsContainer>
+        </Container>
       </main>
     </PortfolioStyled>
   );

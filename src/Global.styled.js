@@ -19,10 +19,14 @@ export const GlobalStyles = createGlobalStyle `
   width: var(--icon-size);
   border: none;
 }
-
 .full-width {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+}
+
+section {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .full-width__inner-container {
@@ -38,8 +42,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background-color: var(--background-color);
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 
