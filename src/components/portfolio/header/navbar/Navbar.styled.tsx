@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
 const NavbarStyled = styled.nav`
-  height: 2rem;
+  box-sizing: border-box;
+  min-height: 2.5rem;
   position: fixed;
   top: 0;
   z-index: 10;
   background-color: var(--background-color);
   width: 100vw;
-  transition: background-color .5s ease-in-out,padding .5s ease-in-out;
+  transition: background-color .25s ease-in-out, padding .25s ease-in-out;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   & ul {
     display: flex;
     list-style: none;
+    align-items: center;
+    min-height: inherit;
     li {
       margin-left: 40px;
     }

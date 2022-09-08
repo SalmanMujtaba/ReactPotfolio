@@ -1,24 +1,19 @@
-import { ICard } from "../../models/interfaces";
+import { ICard } from "src/models/interfaces";
 import styled from "styled-components";
 
-const CardStyled = styled.div<{enableHover?: string}>`
-  &.card {
-    min-width: var(--card-width);
-    min-height: var(--card-height);
-    position: relative;
-    border-radius: 16px;
-    background-color: white;
-    transition-duration: 200ms;
-    padding: 32px 16px;
-  }
-/* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%) */
+const CardStyled = styled.div<{height?: string, width?: string}>`
+  min-width: ${props => props.width? props.width: "300px"};
+  min-height: ${props => props.height? props.height: "350px"};
+  position: relative;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 2rem 1rem;
 `;
 
 
 const Card: React.FC<ICard> = (props) => {
-
   return (
-    <CardStyled className={`${props.className} card`}>
+    <CardStyled height={props.height} width={props.width} className={props.className}>
       <h3 className="card__title">{props.title}</h3>
       <div className="card__content">
         {props.children}

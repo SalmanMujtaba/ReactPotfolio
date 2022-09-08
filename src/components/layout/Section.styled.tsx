@@ -7,9 +7,6 @@ const SectionStyled = styled.section<{position?: string, color?: string, transfo
 `;
 
 const Section: React.FC<{color?: string, className?: string, position?:string, children?: React.ReactNode, transform?: string}> = (props) => {
-
-
-
   return (
       <SectionStyled {...props}>
         {props.children}

@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle `
+export const GlobalStyles = createGlobalStyle`
 :root {
   --card-height: 350px;
   --card-width: 300px;
   --icon-size: 50px;
-  --background-color: rgb(244, 244, 250);
+  --background-color: #1CD6CE;
   --max-content-width: 1280px;
+  --white: white;
 }
 
 .flex {
@@ -19,6 +20,7 @@ export const GlobalStyles = createGlobalStyle `
   width: var(--icon-size);
   border: none;
 }
+
 .full-width {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -34,16 +36,14 @@ section {
   max-width: var(--max-content-width);
 }
 
-
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Segoe UI';
+  font-family: Roboto, 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Segoe UI';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background-color: var(--background-color);
 }
-
 
 /* Box sizing rules */
 
@@ -54,7 +54,11 @@ body {
   scroll-behavior: smooth;
 }
 
-
+h1 {
+  font-weight: 300;
+  font-family: Roboto;
+  font-size: 3.5rem;
+}
 
 /* Remove default margin */
 
@@ -138,4 +142,4 @@ select {
     scroll-behavior: auto !important;
   }
 }
-`
+`;

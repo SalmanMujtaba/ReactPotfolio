@@ -1,4 +1,5 @@
-import CardsContainer from "./projects/cards-container/CardsContainer.styled";
+import AuthorBox from "./AuthorBox.styled";
+import CardsContainer from "./CardsContainer.styled";
 import Header from "./header/Header.styled";
 import styled from "styled-components";
 const PortfolioStyled = styled.main`
@@ -18,6 +19,7 @@ const Portfolio = ()=>{
       <Header></Header>
       <main>
         <Container className="app-container">
+          <AuthorBox></AuthorBox>
           <CardsContainer></CardsContainer>
         </Container>
       </main>

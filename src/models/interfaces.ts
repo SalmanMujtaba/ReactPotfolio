@@ -1,3 +1,7 @@
+interface ICommon {
+  className?: string;
+  children?: Children;
+}
 export interface IMargin {
   marginTop?: string,
   marginBottom?: string,
@@ -6,9 +10,14 @@ export interface IMargin {
 }
 type Children = React.ReactNode;
 
-export interface ICard {
-  className?: string;
-  children?: Children;
+export interface ICard extends ICommon {
   title?: string;
   enableHover?: string;
+  height?: string;
+  width?: string;
+}
+
+
+export interface IButton extends ICommon {
+  handleClick: () => void
 }

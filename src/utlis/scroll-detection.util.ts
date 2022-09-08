@@ -6,6 +6,7 @@ const THRESHOLD = 0;
 
 const useScrollDirection = () => {
   const [scrollDirection, setScrollDirection] = useState(AppConstants.get("SCROLL_UP"));
+  const [isTop, setTop] = useState(true);
 
   const blocking = useRef(false);
   const prevScrollY = useRef(0);
@@ -15,6 +16,11 @@ const useScrollDirection = () => {
 
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
+      if (scrollY === 0) {
+        setTop(true);
+      } else {
+        setTop(false);
+      }
 
       if (Math.abs(scrollY - prevScrollY.current) >= THRESHOLD) {
         const newScrollDirection =
@@ -30,6 +36,7 @@ const useScrollDirection = () => {
 
     const onScroll = () => {
       if (!blocking.current) {
+
         blocking.current = true;
         window.requestAnimationFrame(updateScrollDirection);
       }
@@ -38,9 +45,9 @@ const useScrollDirection = () => {
     window.addEventListener('scroll', onScroll);
 
     return () => window.removeEventListener('scroll', onScroll);
-  }, [scrollDirection]);
+  }, [scrollDirection, isTop]);
 
-  return scrollDirection;
+  return { scrollDirection, isTop };
 };
 
 export { useScrollDirection };

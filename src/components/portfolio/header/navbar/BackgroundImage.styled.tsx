@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 const BackgroundImageStyled = styled.div<{imageURL: string}>`
-	background-image: url(${props => props.imageURL});
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),url(${props => props.imageURL});
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;

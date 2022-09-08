@@ -1,7 +1,7 @@
-import Card from '../../../ui/Card.styled';
-import Section from '../../../layout/Section.styled';
-import nextSVG from '../../../../assets/images/right-arrow-svgrepo-com.svg';
-import prevSVG from '../../../../assets/images/left-arrow-svgrepo-com.svg';
+import Card from '../ui/Card.styled';
+import Section from '../layout/Section.styled';
+import nextSVG from '../../assets/images/right-arrow-svgrepo-com.svg';
+import prevSVG from '../../assets/images/left-arrow-svgrepo-com.svg';
 import styled from "styled-components";
 import { useState } from "react";
 import useWindowDimensions from "src/utlis/get-dimensions.util.";
@@ -38,6 +38,7 @@ const CardStyled = styled.div<{transform: number}>`
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
+    transition-duration: 200ms;
     box-shadow: -2rem 0 3rem -4rem #000;
     &:first-child {
       box-shadow: -1rem 0 3rem -4rem #000;;
@@ -103,31 +104,31 @@ const CardsContainer = () => {
         <Section className="full-width">
           <CardStyledContainer className="card-primary-container full-width__inner-container">
             <CardStyled transform={currentShift} className="card-secondary-container">
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
               <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
-              <Card className="card__hover" title="Project 1">
+              <Card className="card__hover card" title="Project 1">
                 <p>Hello I am a card</p>
               </Card>
             </CardStyled>
