@@ -29,8 +29,8 @@ type Link = {
 export interface InterfaceIcon extends ICommon {
   height?: string;
   width?: string;
-  src: string;
-  alt: string;
+  alt?: string;
+  icon: string;
   iconType?: string;
 }
 

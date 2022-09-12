@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle `
   --max-content-width: 1280px;
   --white: white;
   --social-icon-size: 24px;
+  --react-color: #61dafb;
 }
 
 .flex {
@@ -22,12 +23,18 @@ export const GlobalStyles = createGlobalStyle `
   border: none;
 }
 
-.social-icon {
+.social-icon--size {
+  height: var(--social-icon-size);
+  width: var(--social-icon-size);
 }
 
 .full-width {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+}
+
+.react-color {
+  color: var(--react-color);
 }
 
 section {

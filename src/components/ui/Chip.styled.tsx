@@ -1,8 +1,7 @@
 import Icon from "./Icon.styled";
-import angularIcon from "../../assets/icons/angular-logo.svg";
 import styled from "styled-components";
 const ChipsStyled = styled.div`
-  height: 40px;
+  height: 30px;
   width: 150px;
   font-size: 16px;
   line-height: 50px;
@@ -16,14 +15,18 @@ const ChipsStyled = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 50%;
-}
+  }
+  
+  .chips__text {
+    font-weight: bold;
+  }
 `;
 
-const Chips: React.FC<{text: string}> = (props) => {
+const Chips: React.FC<{text: string, textClassName?: string, icon: string}> = (props) => {
   return (
     <ChipsStyled>
-      <Icon src={angularIcon} alt="angular icon"></Icon>
-      <p>{props.text}</p>
+      <Icon icon={props.icon} alt="angular icon"></Icon>
+      <p className={`chips__text ${props.textClassName}`}>{props.text}</p>
     </ChipsStyled>
   );
 }

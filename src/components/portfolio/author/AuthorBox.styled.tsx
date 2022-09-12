@@ -1,12 +1,11 @@
-import Card from "../ui/Card.styled";
-import Chips from "../ui/Chip.styled";
-import Icon from "../ui/Icon.styled";
-import angularLogo from "../../assets/icons/facebook-logo-f.svg";
-import authorImage from '../../assets/images/author.webp';
-import instaLogo from "../../assets/icons/insta-logo.svg";
-import linkedinLogo from "../../assets/icons/inkedin-logo.svg";
+import AuthContext from "src/store/auth-context";
+import AuthorBoxChips from "./AuthorChips.styled";
+import Card from "../../ui/Card.styled";
+import Icon from "../../ui/Icon.styled";
+import Link from "../../ui/Link.styled";
+import authorImage from '../../../assets/images/author.webp';
 import styled from "styled-components";
-import twitterLogo from "../../assets/icons/twitter-logo.svg";
+import { useContext } from "react";
 const AuthorBoxStyled = styled.div`
   &.author {
     /* width: 80%; */
@@ -87,6 +86,7 @@ const AuthorBoxStyled = styled.div`
 `;
 
 const AuthorBox = () => {
+  const {facebookLink, linkeinLink, twitterLink} = useContext(AuthContext);
   return (
     <AuthorBoxStyled className="author">  
       {/* <div className="author__container"> */}
@@ -98,16 +98,16 @@ const AuthorBox = () => {
             <div className="author__heading">
               <h3 className="author__title">Salman Mujtaba</h3>
               <div className="author__icons">
-                <a href=""><Icon src={angularLogo} iconType="social" alt="Angular"></Icon></a>
-                <a href=""><Icon src={twitterLogo} iconType="social" alt="Angular"></Icon></a>
-                <a href=""><Icon src={instaLogo} iconType="social" alt="Angular"></Icon></a>
-                <a href=""><Icon src={linkedinLogo} iconType="social" alt="Angular"></Icon></a>
+                <Link href={facebookLink!}><Icon className="social-icon--size" icon="angular"></Icon></Link>
+                <Link href={twitterLink!}><Icon className="social-icon--size" icon="twitter"></Icon></Link>
+                <Link href=""><Icon className="social-icon--size" icon="instagram"></Icon></Link>
+                <Link href={linkeinLink!}><Icon className="social-icon--size" icon="linkedin"></Icon></Link>
               </div>
             </div>
             <p>Lpr</p>
+            <AuthorBoxChips></AuthorBoxChips>
           </div>
         </Card.Body>
-        <Card.Footer><Chips text="Angular"></Chips></Card.Footer>
       </Card>
       {/* </div> */}
     </AuthorBoxStyled>
