@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle `
 :root {
   --card-height: 350px;
   --card-width: 300px;
@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   --background-color: #1CD6CE;
   --max-content-width: 1280px;
   --white: white;
+  --social-icon-size: 24px;
 }
 
 .flex {
@@ -19,6 +20,9 @@ export const GlobalStyles = createGlobalStyle`
   height: var(--icon-size);
   width: var(--icon-size);
   border: none;
+}
+
+.social-icon {
 }
 
 .full-width {

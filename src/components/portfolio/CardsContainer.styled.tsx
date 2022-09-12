@@ -104,32 +104,41 @@ const CardsContainer = () => {
         <Section className="full-width">
           <CardStyledContainer className="card-primary-container full-width__inner-container">
             <CardStyled transform={currentShift} className="card-secondary-container">
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-              <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+              <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
-              <Card className="card__hover card" title="Project 1">
-                <p>Hello I am a card</p>
+              <Card className="card__hover card">
+                <Card.Title>Project blah blah</Card.Title>
+                <Card.Body>Hello I am a card</Card.Body>
               </Card>
             </CardStyled>
           </CardStyledContainer>
