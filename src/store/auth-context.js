@@ -1,5 +1,5 @@
-import React from 'react';
 import AppConstants from 'src/constants/app-constants';
+import React from 'react';
 
 const AuthContext = React.createContext({
   goToFaceBook,

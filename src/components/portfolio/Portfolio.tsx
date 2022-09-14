@@ -2,9 +2,7 @@ import AuthorBox from "./author/AuthorBox.styled";
 import CardsContainer from "./CardsContainer.styled";
 import Header from "./header/Header.styled";
 import styled from "styled-components";
-const PortfolioStyled = styled.main`
-
-`;
+const PortfolioStyled = styled.main``;
 
 const Container = styled.div`
   &.app-container {
@@ -13,8 +11,8 @@ const Container = styled.div`
   }
 `;
 
-const Portfolio = ()=>{
-  return(
+const Portfolio = () => {
+  return (
     <PortfolioStyled>
       <Header></Header>
       <main>
@@ -25,6 +23,6 @@ const Portfolio = ()=>{
       </main>
     </PortfolioStyled>
   );
-}
+};
 
 export default Portfolio;

@@ -12,6 +12,31 @@ export const GlobalStyles = createGlobalStyle `
   --react-color: #61dafb;
 }
 
+h1 {
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.2lpr5rem);
+}
+
 .flex {
   display: flex;
 }

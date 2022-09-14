@@ -3,7 +3,7 @@ import AuthorBoxChips from "./AuthorChips.styled";
 import Card from "../../ui/Card.styled";
 import Icon from "../../ui/Icon.styled";
 import Link from "../../ui/Link.styled";
-import authorImage from '../../../assets/images/author.webp';
+import authorImage from "../../../assets/images/author.webp";
 import styled from "styled-components";
 import { useContext } from "react";
 const AuthorBoxStyled = styled.div`
@@ -39,7 +39,7 @@ const AuthorBoxStyled = styled.div`
   }
   .card__content--author {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: max-content;
     /* padding: 3rem; */
   }
@@ -86,9 +86,9 @@ const AuthorBoxStyled = styled.div`
 `;
 
 const AuthorBox = () => {
-  const {facebookLink, linkeinLink, twitterLink} = useContext(AuthContext);
+  const { facebookLink, linkeinLink, twitterLink } = useContext(AuthContext);
   return (
-    <AuthorBoxStyled className="author">  
+    <AuthorBoxStyled className="author">
       {/* <div className="author__container"> */}
       <Card className="author__card">
         <Card.Title>About Me</Card.Title>
@@ -98,13 +98,26 @@ const AuthorBox = () => {
             <div className="author__heading">
               <h3 className="author__title">Salman Mujtaba</h3>
               <div className="author__icons">
-                <Link href={facebookLink!}><Icon className="social-icon--size" icon="angular"></Icon></Link>
-                <Link href={twitterLink!}><Icon className="social-icon--size" icon="twitter"></Icon></Link>
-                <Link href=""><Icon className="social-icon--size" icon="instagram"></Icon></Link>
-                <Link href={linkeinLink!}><Icon className="social-icon--size" icon="linkedin"></Icon></Link>
+                <Link href={facebookLink!}>
+                  <Icon className="social-icon--size" icon="angular"></Icon>
+                </Link>
+                <Link href={twitterLink!}>
+                  <Icon className="social-icon--size" icon="twitter"></Icon>
+                </Link>
+                <Link href="">
+                  <Icon className="social-icon--size" icon="instagram"></Icon>
+                </Link>
+                <Link href={linkeinLink!}>
+                  <Icon className="social-icon--size" icon="linkedin"></Icon>
+                </Link>
               </div>
             </div>
-            <p>Lpr</p>
+            <p>
+              I am a Full Stack developer working predominently on Javascript
+              and related libraries and frameworks. I like to work on new
+              technologies and keep experimenting with them. I have more than 5
+              years of industry experience.
+            </p>
             <AuthorBoxChips></AuthorBoxChips>
           </div>
         </Card.Body>
@@ -112,7 +125,6 @@ const AuthorBox = () => {
       {/* </div> */}
     </AuthorBoxStyled>
   );
-}
-
+};
 
 export default AuthorBox;

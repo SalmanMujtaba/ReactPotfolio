@@ -11,24 +11,28 @@ const ChipsStyled = styled.div`
   align-items: center;
 
   & img {
-  margin-left: -10px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+    margin-left: -10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
   }
-  
+
   .chips__text {
     font-weight: bold;
   }
 `;
 
-const Chips: React.FC<{text: string, textClassName?: string, icon: string}> = (props) => {
+const Chips: React.FC<{
+  text: string;
+  textClassName?: string;
+  icon: string;
+}> = (props) => {
   return (
     <ChipsStyled>
       <Icon icon={props.icon} alt="angular icon"></Icon>
       <p className={`chips__text ${props.textClassName}`}>{props.text}</p>
     </ChipsStyled>
   );
-}
+};
 
 export default Chips;
