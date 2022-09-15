@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const NavbarStyled = styled.nav`
   box-sizing: border-box;
-  min-height: 2.5rem;
+  min-height: var(--navbar-height);
   position: fixed;
   top: 0;
   z-index: 10;
   background-color: var(--background-color);
   width: 100vw;
-  transition: background-color .25s ease-in-out, padding .25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, padding 0.25s ease-in-out;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   & ul {
     display: flex;
@@ -21,17 +21,16 @@ const NavbarStyled = styled.nav`
   }
 `;
 
-const Navbar: React.FC<{className?: string}> = (props) => {
-
+const Navbar: React.FC<{ className?: string }> = (props) => {
   return (
-      <NavbarStyled className={props.className}>
-        <ul>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>Else</li>
-        </ul>
-      </NavbarStyled>
+    <NavbarStyled className={props.className}>
+      <ul>
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Else</li>
+      </ul>
+    </NavbarStyled>
   );
-}
+};
 
-export default  Navbar;
+export default Navbar;

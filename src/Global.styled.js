@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle `
   --white: white;
   --social-icon-size: 24px;
   --react-color: #61dafb;
+  --navbar-height: 2.5rem;
 }
 
 h1 {
@@ -34,7 +35,7 @@ h2, h3, h4, h5 {
 }
 
 p {
-  font-size: clamp(1rem, 2vw, 1.2lpr5rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .flex {
@@ -62,9 +63,20 @@ p {
   color: var(--react-color);
 }
 
+.position-sticky {
+  position: sticky;
+  top: var(--navbar-height);
+}
+
 section {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.layout-section {
+  padding-inline: 20px;
+  margin-block: 30px;
+  text-align: center;
 }
 
 .full-width__inner-container {

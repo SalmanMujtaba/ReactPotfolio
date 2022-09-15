@@ -1,5 +1,5 @@
+import AppConstants from "src/constants/app-constants";
 import AuthContext from "src/store/auth-context";
-import AuthorBoxChips from "./AuthorChips.styled";
 import Card from "../../ui/Card.styled";
 import Icon from "../../ui/Icon.styled";
 import Link from "../../ui/Link.styled";
@@ -8,17 +8,10 @@ import styled from "styled-components";
 import { useContext } from "react";
 const AuthorBoxStyled = styled.div`
   &.author {
-    /* width: 80%; */
-    /* position: relative; */
-    width: 800px;
+    width: min(100%, 900px);
     margin: 0 auto;
   }
   .author__image {
-    /* position: absolute; */
-    /* width: 55%; */
-    /* height: 400px; */
-    /* top: 0; */
-    /* left: 0; */
     display: inline-block;
     object-fit: cover;
     border-radius: 100%;
@@ -26,22 +19,14 @@ const AuthorBoxStyled = styled.div`
     box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
   }
 
-  /* .author__container {
-    display: flex;
-    justify-content: flex-end;
-    width: inherit;
-  } */
   .author__card {
-    /* clip-path: polygon(0% 80%,80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%); */
     min-height: 400px;
-    /* width: ; */
     box-shadow: 4px 4px 14px 0 rgb(8 15 52 / 4%);
   }
   .card__content--author {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: max-content;
-    /* padding: 3rem; */
   }
   .author__content {
     grid-column: 2/7;
@@ -80,8 +65,13 @@ const AuthorBoxStyled = styled.div`
       }
     }
   }
+
+  p {
+    text-align: left;
+  }
+
   .author__title {
-    /* justify-self: center; */
+    justify-self: start;
   }
 `;
 
@@ -99,13 +89,22 @@ const AuthorBox = () => {
               <h3 className="author__title">Salman Mujtaba</h3>
               <div className="author__icons">
                 <Link href={facebookLink!}>
-                  <Icon className="social-icon--size" icon="angular"></Icon>
+                  <Icon
+                    className="social-icon--size"
+                    icon={AppConstants.get("ANGULAR_LOWERCASE_LABEL")!}
+                  ></Icon>
                 </Link>
                 <Link href={twitterLink!}>
-                  <Icon className="social-icon--size" icon="twitter"></Icon>
+                  <Icon
+                    className="social-icon--size"
+                    icon={AppConstants.get("TWITTER_LOWERCASE_LABEL")!}
+                  ></Icon>
                 </Link>
                 <Link href="">
-                  <Icon className="social-icon--size" icon="instagram"></Icon>
+                  <Icon
+                    className="social-icon--size"
+                    icon={AppConstants.get("INSTAGRAM_LOWERCASE_LABEL")!}
+                  ></Icon>
                 </Link>
                 <Link href={linkeinLink!}>
                   <Icon className="social-icon--size" icon="linkedin"></Icon>
@@ -113,12 +112,17 @@ const AuthorBox = () => {
               </div>
             </div>
             <p>
-              I am a Full Stack developer working predominently on Javascript
-              and related libraries and frameworks. I like to work on new
-              technologies and keep experimenting with them. I have more than 5
-              years of industry experience.
+              I am a Full Stack developer passionate about Javascript and its
+              related libraries and frameworks. I like to experiment with new
+              technologies and develop solutions with them. I have more than 5
+              years of industry experience and a Master's degree from UNCC. I
+              spend my weekends playing Cricket or rooting for Manchester
+              United! I also like to invest my time in reading technical blogs
+              and reviewing novel open-source projects. I am married to my
+              adorable wife, Yasha, who is currently in India waiting for her
+              visa approval. 😔
             </p>
-            <AuthorBoxChips></AuthorBoxChips>
+            {/* <AuthorBoxChips></AuthorBoxChips> */}
           </div>
         </Card.Body>
       </Card>

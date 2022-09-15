@@ -1,3 +1,4 @@
+import AppConstants from "src/constants/app-constants";
 import Chips from "src/components/ui/Chip.styled";
 import styled from "styled-components";
 
@@ -13,7 +14,10 @@ const AuthorBoxChips = () => {
   return (
     <AuthorChipsStyled className="author__chips">
       <Chips icon="react" text="React" textClassName="react-color"></Chips>
-      <Chips icon="angular" text="Angular"></Chips>
+      <Chips
+        icon={AppConstants.get("ANGULAR_LOWERCASE_LABEL")!}
+        text="Angular"
+      ></Chips>
       <Chips icon="javascript" text="Javascript"></Chips>
       <Chips icon="nextjs" text="Next JS"></Chips>
       <Chips icon="angular" text="Angular"></Chips>

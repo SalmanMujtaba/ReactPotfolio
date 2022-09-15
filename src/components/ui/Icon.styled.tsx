@@ -1,3 +1,4 @@
+import AppConstants from "src/constants/app-constants";
 import { InterfaceIcon } from "src/models/interfaces";
 import angularLogo from "../../assets/icons/angular-logo.svg";
 import facebookLogo from "../../assets/icons/facebook-logo.svg";
@@ -12,23 +13,23 @@ import twitterLogo from "../../assets/icons/twitter-logo.svg";
 
 const getIcon = (type: string) => {
   switch (type) {
-    case "angular":
+    case AppConstants.get("ANGULAR_LOWERCASE_LABEL"):
       return angularLogo;
-    case "twitter":
+    case AppConstants.get("TWITTER_LOWERCASE_LABEL"):
       return twitterLogo;
-    case "instagram":
+    case AppConstants.get("INSTAGRAM_LOWERCASE_LABEL"):
       return instaLogo;
-    case "facebook":
+    case AppConstants.get("FACEBOOK_LOWERCASE_LABEL"):
       return facebookLogo;
     case "github":
       return githubLogo;
     case "linkedin":
       return linkedinLogo;
-    case "react":
+    case AppConstants.get("REACT_LOWERCASE_LABEL"):
       return reactLogo;
-    case "javascript":
+    case AppConstants.get("JAVASCRIPT_LOWERCASE_LABEL"):
       return javascriptLogo;
-    case "nextjs":
+    case AppConstants.get("NEXT_LOWERCASE_LABEL"):
       return nextjsLogo;
   }
 };

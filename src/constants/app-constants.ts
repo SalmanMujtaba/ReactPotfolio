@@ -7,7 +7,18 @@ const AppConstants = new Map([
   ["FACEBOOK_LINK", "https://www.facebook.com/salman.mujtaba.98"],
   ["EXPENSIFY_APP_LINK", "https://github.com/SalmanMujtaba/React-Expensify-App"],
   ["TWITTER_LINK", "https://twitter.com/salman17931"],
-  ["FACEBOOK_LINK", "https://www.facebook.com/salman.mujtaba.98"]
+  ["FACEBOOK_LINK", "https://www.facebook.com/salman.mujtaba.98"],
+  ["AREAS_HEADING", "Areas of interest"],
+  ["AREAS_SUB_HEADING", "Take a look at what I am enthused about"],
+  ["ANGULAR_LOWERCASE_LABEL", "angular"],
+  ["REACT_LOWERCASE_LABEL", "react"],
+  ["JAVASCRIPT_LOWERCASE_LABEL", "javascript"],
+  ["NODE_LOWERCASE_LABEL", "node"],
+  ["NEXT_LOWERCASE_LABEL", "next"],
+  ["FACEBOOK_LOWERCASE_LABEL", "facebook"],
+  ["TWITTER_LOWERCASE_LABEL", "twitter"],
+  ["INSTAGRAM_LOWERCASE_LABEL", "instagram"],
+
 ]
 );
 

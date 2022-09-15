@@ -1,3 +1,4 @@
+import Areas from "./Areas/Areas.styled";
 import AuthorBox from "./author/AuthorBox.styled";
 import CardsContainer from "./CardsContainer.styled";
 import Header from "./header/Header.styled";
@@ -17,7 +18,12 @@ const Portfolio = () => {
       <Header></Header>
       <main>
         <Container className="app-container">
-          <AuthorBox></AuthorBox>
+          <div className="layout-section">
+            <AuthorBox></AuthorBox>
+          </div>
+          <div className="layout-section position-sticky">
+            <Areas></Areas>
+          </div>
           <CardsContainer></CardsContainer>
         </Container>
       </main>
