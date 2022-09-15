@@ -1,14 +1,19 @@
 import AppConstants from "src/constants/app-constants";
 import { InterfaceIcon } from "src/models/interfaces";
+import styled from "styled-components";
 import angularLogo from "../../assets/icons/angular-logo.svg";
+import cssLogo from "../../assets/icons/css3-logo.svg";
+import dbLogo from "../../assets/icons/database-icon.png";
 import facebookLogo from "../../assets/icons/facebook-logo.svg";
 import githubLogo from "../../assets/icons/github-logo.svg";
+import htmlLogo from "../../assets/icons/html-logo.svg";
+import nodeLogo from "../../assets/icons/icons8-node-js.svg";
+import linkedinLogo from "../../assets/icons/inkedin-logo.svg";
 import instaLogo from "../../assets/icons/insta-logo.svg";
 import javascriptLogo from "../../assets/icons/javascript-logo.svg";
-import linkedinLogo from "../../assets/icons/inkedin-logo.svg";
+import nestLogo from "../../assets/icons/nestjs-logo.svg";
 import nextjsLogo from "../../assets/icons/next-js-logo.svg";
 import reactLogo from "../../assets/icons/react-logo.svg";
-import styled from "styled-components";
 import twitterLogo from "../../assets/icons/twitter-logo.svg";
 
 const getIcon = (type: string) => {
@@ -31,6 +36,16 @@ const getIcon = (type: string) => {
       return javascriptLogo;
     case AppConstants.get("NEXT_LOWERCASE_LABEL"):
       return nextjsLogo;
+    case AppConstants.get("NODE_LOWERCASE_LABEL"):
+      return nodeLogo;
+    case AppConstants.get("NEST_LOWERCASE_LABEL"):
+      return nestLogo;
+    case AppConstants.get("DATABASE_LOWERCASE_LABEL"):
+      return dbLogo;
+    case AppConstants.get("CSS_LOWERCASE_LABEL"):
+      return cssLogo;
+    case AppConstants.get("HTML_LOWERCASE_LABEL"):
+      return htmlLogo;
   }
 };
 
@@ -46,6 +61,7 @@ const Icon: React.FC<InterfaceIcon> = (props) => {
   const src = getIcon(props.icon!);
   return (
     <IconStyled
+      loading="lazy"
       iconType={props?.iconType}
       className={props.className}
       src={src}

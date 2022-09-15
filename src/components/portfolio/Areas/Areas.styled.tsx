@@ -1,6 +1,6 @@
 import AppConstants from "src/constants/app-constants";
-import AreaItem from "./AreaItem.styled";
 import styled from "styled-components";
+import AreaItem from "./AreaItem.styled";
 
 const AreasStyled = styled.div`
   .area__container {
@@ -18,12 +18,20 @@ const Areas = () => {
       {areasHeading && <h2>{areasHeading}</h2>}
       {areasSubHeading && <h4>{areasSubHeading}</h4>}
       <div className="area__container">
-        <AreaItem type="javascript"></AreaItem>
-        <AreaItem type="angular"></AreaItem>
-        <AreaItem type="react"></AreaItem>
-        <AreaItem type="javascript"></AreaItem>
-        <AreaItem type="javascript"></AreaItem>
-        <AreaItem type="javascript"></AreaItem>
+        <AreaItem
+          type={AppConstants.get("JAVASCRIPT_LOWERCASE_LABEL")!}
+        ></AreaItem>
+        <AreaItem
+          type={AppConstants.get("ANGULAR_LOWERCASE_LABEL")!}
+        ></AreaItem>
+        <AreaItem type={AppConstants.get("REACT_LOWERCASE_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("NEST_LOWERCASE_LABEL")!}></AreaItem>
+        <AreaItem
+          type={AppConstants.get("DATABASE_LOWERCASE_LABEL")!}
+        ></AreaItem>
+        <AreaItem type={AppConstants.get("CSS_LOWERCASE_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("HTML_LOWERCASE_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("NODE_LOWERCASE_LABEL")!}></AreaItem>
       </div>
     </AreasStyled>
   );

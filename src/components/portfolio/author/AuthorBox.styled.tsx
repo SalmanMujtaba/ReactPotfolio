@@ -1,15 +1,16 @@
+import { useContext } from "react";
 import AppConstants from "src/constants/app-constants";
 import AuthContext from "src/store/auth-context";
+import styled from "styled-components";
+import authorImage from "../../../assets/images/author.webp";
 import Card from "../../ui/Card.styled";
 import Icon from "../../ui/Icon.styled";
 import Link from "../../ui/Link.styled";
-import authorImage from "../../../assets/images/author.webp";
-import styled from "styled-components";
-import { useContext } from "react";
 const AuthorBoxStyled = styled.div`
   &.author {
     width: min(100%, 900px);
     margin: 0 auto;
+    padding: 1rem;
   }
   .author__image {
     display: inline-block;
@@ -83,7 +84,12 @@ const AuthorBox = () => {
       <Card className="author__card">
         <Card.Title>About Me</Card.Title>
         <Card.Body className="card__content--author">
-          <img className="author__image" src={authorImage} alt="Author's"></img>
+          <img
+            loading="lazy"
+            className="author__image"
+            src={authorImage}
+            alt="Author's"
+          ></img>
           <div className="author__content">
             <div className="author__heading">
               <h3 className="author__title">Salman Mujtaba</h3>

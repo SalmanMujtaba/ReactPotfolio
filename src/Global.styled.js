@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle `
   --card-height: 350px;
   --card-width: 300px;
   --icon-size: 50px;
-  --background-color: #1CD6CE;
+  --background-color: rgb(244, 244, 250);
   --max-content-width: 1280px;
   --white: white;
   --social-icon-size: 24px;

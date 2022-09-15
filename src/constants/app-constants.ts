@@ -15,10 +15,12 @@ const AppConstants = new Map([
   ["JAVASCRIPT_LOWERCASE_LABEL", "javascript"],
   ["NODE_LOWERCASE_LABEL", "node"],
   ["NEXT_LOWERCASE_LABEL", "next"],
+  ["NEST_LOWERCASE_LABEL", "nest"],
   ["FACEBOOK_LOWERCASE_LABEL", "facebook"],
   ["TWITTER_LOWERCASE_LABEL", "twitter"],
   ["INSTAGRAM_LOWERCASE_LABEL", "instagram"],
-
+  ["DATABASE_LOWERCASE_LABEL", "database"],
+  ["CSS_LOWERCASE_LABEL", "css"]
 ]
 );
 
