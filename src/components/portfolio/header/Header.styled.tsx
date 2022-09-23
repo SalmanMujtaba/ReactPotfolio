@@ -1,17 +1,18 @@
 import BackgroundImage from "./navbar/BackgroundImage.styled";
+import Button from "src/components/ui/Button.styled";
 import Navbar from "./navbar/Navbar.styled";
 import styled from "styled-components";
 import { useScrollDirection } from "src/utlis/scroll-detection.util";
 import wallpaper from "../../../assets/images/about_me.jpg";
 
 const scroll = (isTop: boolean) => {
-  if(isTop) {
+  if (isTop) {
     return "background-color: transparent; padding-top: 1rem; padding-bottom: 1rem";
   } else {
     return "background-color: var(--background-color); padding-top: unset; padding-bottom: unset";
   }
-}
-const HeaderStyled = styled.header<{isTop?: boolean}>`
+};
+const HeaderStyled = styled.header<{ isTop?: boolean }>`
   .header__image {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -20,7 +21,7 @@ const HeaderStyled = styled.header<{isTop?: boolean}>`
     grid-template-rows: repeat(10, 1fr);
   }
   .header__text {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
@@ -48,27 +49,31 @@ const HeaderStyled = styled.header<{isTop?: boolean}>`
     z-index: -1;
   }
   .navbar {
-    ${props => props.isTop && scroll(props.isTop)};
+    ${(props) => props.isTop && scroll(props.isTop)};
   }
 `;
 
 const Header = () => {
-  const {isTop} = useScrollDirection();
+  const { isTop } = useScrollDirection();
 
-
+  const goToProjects = () => {};
   return (
     <HeaderStyled isTop={isTop}>
       <Navbar className="navbar"></Navbar>
       <section className="header__image">
-        <div className="header__text">        
+        <div className="header__text">
           <h1>Salman Mujtaba</h1>
           <hr></hr>
           <h2>Full Stack Developer</h2>
+          <Button handleClick={goToProjects}></Button>
         </div>
-        <BackgroundImage className="header__background-image" imageURL={wallpaper}></BackgroundImage>
+        <BackgroundImage
+          className="header__background-image"
+          imageURL={wallpaper}
+        ></BackgroundImage>
       </section>
     </HeaderStyled>
   );
-}
+};
 
 export default Header;

@@ -8,6 +8,9 @@ const AreasStyled = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 20px;
   }
+  .area__subheading {
+    margin-block-end: 50px;
+  }
 `;
 
 const Areas = () => {
@@ -16,7 +19,11 @@ const Areas = () => {
   return (
     <AreasStyled className="area">
       {areasHeading && <h2>{areasHeading}</h2>}
-      {areasSubHeading && <h4>{areasSubHeading}</h4>}
+      {areasSubHeading && (
+        <h4 className="area__subheading gray-color fw-400">
+          {areasSubHeading}
+        </h4>
+      )}
       <div className="area__container">
         <AreaItem
           type={AppConstants.get("JAVASCRIPT_LOWERCASE_LABEL")!}

@@ -5,6 +5,7 @@ import angularLogo from "../../assets/icons/angular-logo.svg";
 import cssLogo from "../../assets/icons/css3-logo.svg";
 import dbLogo from "../../assets/icons/database-icon.png";
 import facebookLogo from "../../assets/icons/facebook-logo.svg";
+import gearIcon from "../../assets/icons/gear-icon.svg";
 import githubLogo from "../../assets/icons/github-logo.svg";
 import htmlLogo from "../../assets/icons/html-logo.svg";
 import nodeLogo from "../../assets/icons/icons8-node-js.svg";
@@ -46,6 +47,8 @@ const getIcon = (type: string) => {
       return cssLogo;
     case AppConstants.get("HTML_LOWERCASE_LABEL"):
       return htmlLogo;
+    case AppConstants.get("GEAR_LOWERCASE_LABEL"):
+      return gearIcon;
   }
 };
 

@@ -1,10 +1,10 @@
+import Card from "../ui/Card.styled";
+import Section from "../layout/Section.styled";
+import nextSVG from "../../assets/images/right-arrow-svgrepo-com.svg";
+import prevSVG from "../../assets/images/left-arrow-svgrepo-com.svg";
+import styled from "styled-components";
 import { useState } from "react";
 import useWindowDimensions from "src/utlis/get-dimensions.util.";
-import styled from "styled-components";
-import prevSVG from "../../assets/images/left-arrow-svgrepo-com.svg";
-import nextSVG from "../../assets/images/right-arrow-svgrepo-com.svg";
-import Section from "../layout/Section.styled";
-import Card from "../ui/Card.styled";
 
 let offset = 288;
 let maxShift = 1800;

@@ -2,7 +2,11 @@ import Icon from "src/components/ui/Icon.styled";
 import AppConstants from "src/constants/app-constants";
 import styled from "styled-components";
 
-const AreaItemStyled = styled.div``;
+const AreaItemStyled = styled.div`
+  p {
+    padding-block-start: 20px;
+  }
+`;
 
 const AreaItem: React.FC<{ className?: string; type: string }> = (props) => {
   return (

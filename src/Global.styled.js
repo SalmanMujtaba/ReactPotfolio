@@ -11,6 +11,9 @@ export const GlobalStyles = createGlobalStyle `
   --social-icon-size: 24px;
   --react-color: #61dafb;
   --navbar-height: 2.5rem;
+  --background-color-light: #f4f4fa;
+  --background-color-dark: #0C0B31;
+  --black: #000;
 }
 
 h1 {
@@ -40,6 +43,14 @@ p {
 
 .flex {
   display: flex;
+}
+
+.gray-color {
+  color: gray;
+}
+
+.fw-400 {
+  font-weight: 400;
 }
 
 .icon-button {

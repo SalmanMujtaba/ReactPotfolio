@@ -20,7 +20,8 @@ const AppConstants = new Map([
   ["TWITTER_LOWERCASE_LABEL", "twitter"],
   ["INSTAGRAM_LOWERCASE_LABEL", "instagram"],
   ["DATABASE_LOWERCASE_LABEL", "database"],
-  ["CSS_LOWERCASE_LABEL", "css"]
+  ["CSS_LOWERCASE_LABEL", "css"],
+  ["GEAR_LOWERCASE_LABEL", "gear"]
 ]
 );
 

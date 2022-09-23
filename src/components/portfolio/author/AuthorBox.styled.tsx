@@ -14,6 +14,7 @@ const AuthorBoxStyled = styled.div`
   }
   .author__image {
     display: inline-block;
+    grid-area: image;
     object-fit: cover;
     border-radius: 100%;
     max-width: 150px;
@@ -26,17 +27,25 @@ const AuthorBoxStyled = styled.div`
   }
   .card__content--author {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "image image content content content content";
+    /* grid-template-columns: repeat(6, 1fr); */
     grid-auto-rows: max-content;
+    @media (max-width: 769px) {
+      display: block;
+    }
   }
   .author__content {
-    grid-column: 2/7;
+    grid-area: content;
+    /* grid-column: 2/7; */
     margin-inline-start: 20px;
   }
   .author__heading {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    @media (max-width: 769px) {
+      display: block;
+    }
   }
   .author__link {
     transition: transform 300ms ease, -webkit-transform 300ms ease;
@@ -47,6 +56,9 @@ const AuthorBoxStyled = styled.div`
   .author__icons {
     place-content: end;
     display: flex;
+    @media (max-width: 769px) {
+      place-content: center;
+    }
     a {
       &:not(:first-child) {
         margin-left: 20px;
