@@ -1,4 +1,4 @@
-import AlbumSearch from "./AlbumSearch.styled";
+import AlbumSearch from "./album/AlbumSearch.styled";
 
 const Projects = () => {
   return <AlbumSearch></AlbumSearch>;

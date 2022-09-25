@@ -59,12 +59,53 @@ p {
   font-weight: var(--subheading-font-weight);
 }
 
+figcaption {
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  padding-top: 10px;
+}
 .heading {
   line-height: var(--heading-line-height);
   letter-spacing:var(--heading-letter-spacing);
   font-weight: var(--heading-font-weight);
   margin-block-end: 1.25rem;
   text-align: center;
+}
+
+.feature-list {
+  display: block;
+  margin-left: -0.625rem;
+}
+
+.feature-list li {
+  display: block;
+  position: relative;
+}
+
+.feature-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.feature-list li:before {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -1.875rem;
+  margin-top: -.9em;
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+}
+
+hr.styled {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .fancy-text {
@@ -82,11 +123,19 @@ p {
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .ml-20 {
 margin-left: 20px;
+}
+
+.mb-20 {
+  margin-block-end: 20px;
+}
+
+.mb-10 {
+  margin-block-end: 10px;
 }
 
 /* define the background-scrolling animation */
@@ -129,7 +178,10 @@ section {
 .layout-section {
   padding-inline: 20px;
   margin-block: 30px;
-  ${'' /* text-align: center; */}
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .hide-md {

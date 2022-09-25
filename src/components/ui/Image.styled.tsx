@@ -18,7 +18,7 @@ const ImageStyled = styled.figure`
   }
   img {
     object-fit: cover;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    /* box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9); */
   }
 `;
 

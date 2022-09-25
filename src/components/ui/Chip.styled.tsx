@@ -13,11 +13,11 @@ const ChipsStyled = styled.div`
   & img {
     height: 30px;
     width: 30px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   .chips__text {
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 10px;
   }
 `;

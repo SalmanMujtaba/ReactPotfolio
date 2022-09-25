@@ -1,11 +1,11 @@
-import { useContext } from "react";
 import AppConstants from "src/constants/app-constants";
 import AuthContext from "src/store/auth-context";
-import styled from "styled-components";
-import authorImage from "../../../assets/images/author.webp";
 import Card from "../../ui/Card.styled";
 import Icon from "../../ui/Icon.styled";
 import Link from "../../ui/Link.styled";
+import authorImage from "../../../assets/images/author.webp";
+import styled from "styled-components";
+import { useContext } from "react";
 const AuthorBoxStyled = styled.div`
   &.author {
     width: min(100%, 900px);
@@ -109,19 +109,19 @@ const AuthorBox = () => {
                 <Link href={facebookLink!}>
                   <Icon
                     className="social-icon--size"
-                    icon={AppConstants.get("ANGULAR_LOWERCASE_LABEL")!}
+                    icon={AppConstants.get("ANGULAR_LABEL")!}
                   ></Icon>
                 </Link>
                 <Link href={twitterLink!}>
                   <Icon
                     className="social-icon--size"
-                    icon={AppConstants.get("TWITTER_LOWERCASE_LABEL")!}
+                    icon={AppConstants.get("TWITTER_LABEL")!}
                   ></Icon>
                 </Link>
                 <Link href="">
                   <Icon
                     className="social-icon--size"
-                    icon={AppConstants.get("INSTAGRAM_LOWERCASE_LABEL")!}
+                    icon={AppConstants.get("INSTAGRAM_LABEL")!}
                   ></Icon>
                 </Link>
                 <Link href={linkeinLink!}>

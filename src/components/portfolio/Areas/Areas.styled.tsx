@@ -18,20 +18,14 @@ const Areas = () => {
       {areasHeading && <h2 className="heading">{areasHeading}</h2>}
       {areasSubHeading && <p className="heading-text">{areasSubHeading}</p>}
       <div className="area__container">
-        <AreaItem
-          type={AppConstants.get("JAVASCRIPT_LOWERCASE_LABEL")!}
-        ></AreaItem>
-        <AreaItem
-          type={AppConstants.get("ANGULAR_LOWERCASE_LABEL")!}
-        ></AreaItem>
-        <AreaItem type={AppConstants.get("REACT_LOWERCASE_LABEL")!}></AreaItem>
-        <AreaItem type={AppConstants.get("NEST_LOWERCASE_LABEL")!}></AreaItem>
-        <AreaItem
-          type={AppConstants.get("DATABASE_LOWERCASE_LABEL")!}
-        ></AreaItem>
-        <AreaItem type={AppConstants.get("CSS_LOWERCASE_LABEL")!}></AreaItem>
-        <AreaItem type={AppConstants.get("HTML_LOWERCASE_LABEL")!}></AreaItem>
-        <AreaItem type={AppConstants.get("NODE_LOWERCASE_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("JAVASCRIPT_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("ANGULAR_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("REACT_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("NEST_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("DATABASE_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("CSS_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("HTML_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("NODE_LABEL")!}></AreaItem>
       </div>
     </AreasStyled>
   );
