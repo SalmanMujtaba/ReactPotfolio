@@ -37,3 +37,13 @@ export interface InterfaceIcon extends ICommon {
 export interface IButton extends ICommon {
   handleClick: () => void
 }
+
+
+export interface IImage {
+  figCaption?: string;
+  type: string;
+  alt?: string;
+  height?: string;
+  width?: string;
+  className?: string;
+}

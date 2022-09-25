@@ -1,8 +1,9 @@
-import Icon from "src/components/ui/Icon.styled";
 import AppConstants from "src/constants/app-constants";
+import Icon from "src/components/ui/Icon.styled";
 import styled from "styled-components";
 
 const AreaItemStyled = styled.div`
+  text-align: center;
   p {
     padding-block-start: 20px;
   }

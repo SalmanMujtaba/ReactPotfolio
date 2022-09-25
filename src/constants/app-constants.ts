@@ -12,6 +12,7 @@ const AppConstants = new Map([
   ["AREAS_SUB_HEADING", "Take a look at what I am enthused about"],
   ["ANGULAR_LOWERCASE_LABEL", "angular"],
   ["REACT_LOWERCASE_LABEL", "react"],
+  ["MATERIAL_LOWERCASE_LABEL", "material"],
   ["JAVASCRIPT_LOWERCASE_LABEL", "javascript"],
   ["NODE_LOWERCASE_LABEL", "node"],
   ["NEXT_LOWERCASE_LABEL", "next"],
@@ -21,7 +22,13 @@ const AppConstants = new Map([
   ["INSTAGRAM_LOWERCASE_LABEL", "instagram"],
   ["DATABASE_LOWERCASE_LABEL", "database"],
   ["CSS_LOWERCASE_LABEL", "css"],
-  ["GEAR_LOWERCASE_LABEL", "gear"]
+  ["GEAR_LOWERCASE_LABEL", "gear"],
+  ["GEAR_LOWERCASE_LABEL", "gear"],
+  ["ALBUM_SEARCH_IMG", "albumSearch"],
+  ["ALBUM_SEARCH_IMG_MOBILE", "albumSearchMobile"],
+  ["VERCEL_LOWERCASE_LABEL", "vercel"],
+  ["SCSS_LOWERCASE_LABEL", "scss"]
+
 ]
 );
 

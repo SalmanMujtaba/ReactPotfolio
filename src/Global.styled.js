@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 export const GlobalStyles = createGlobalStyle `
 :root {
   --card-height: 350px;
@@ -14,6 +13,12 @@ export const GlobalStyles = createGlobalStyle `
   --background-color-light: #f4f4fa;
   --background-color-dark: #0C0B31;
   --black: #000;
+  --subheading-color: #9e9e9e;
+  --subheading-font-weight: 300;
+  --subheading-size: 1.25rem;
+  --heading-line-height: 48px;
+  --heading-letter-spacing: 5px;
+  --heading-font-weight: 500;
 }
 
 h1 {
@@ -38,7 +43,8 @@ h2, h3, h4, h5 {
 }
 
 p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(14px, 1.25vw, 1.25rem);
+  line-height: 24px;
 }
 
 .flex {
@@ -46,11 +52,47 @@ p {
 }
 
 .gray-color {
-  color: gray;
+  color: var(--subheading-color);
 }
 
 .fw-400 {
-  font-weight: 400;
+  font-weight: var(--subheading-font-weight);
+}
+
+.heading {
+  line-height: var(--heading-line-height);
+  letter-spacing:var(--heading-letter-spacing);
+  font-weight: var(--heading-font-weight);
+  margin-block-end: 1.25rem;
+  text-align: center;
+}
+
+.fancy-text {
+    /* add a background that is clipped to the text */
+  background-clip: text;
+  -webkit-background-clip: text; /* chrome still needs the -webkit- prefix*/
+  
+  /* make the text transparent so that the background can be seen underneath*/
+  color: transparent;
+  
+  /* set the background-scale, and scroll it along! */
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  animation: scroll 30s infinite linear;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.ml-20 {
+margin-left: 20px;
+}
+
+/* define the background-scrolling animation */
+@keyframes scroll {
+  from { background-position-x: 0;    }
+  to   { background-position-x: -100% }
 }
 
 .icon-button {
@@ -87,12 +129,44 @@ section {
 .layout-section {
   padding-inline: 20px;
   margin-block: 30px;
-  text-align: center;
+  ${'' /* text-align: center; */}
+}
+
+.hide-md {
+  @media (max-width: 769px) {
+    display: none;
+  }
 }
 
 .full-width__inner-container {
   margin: 0 auto;
   max-width: var(--max-content-width);
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+/* Point-zoom Container */
+.img-hover-zoom--point-zoom img {
+  transform-origin: 65% 75%;
+  transition: transform 1s, filter .5s ease-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--point-zoom:hover img {
+  transform: scale(5);
 }
 
 body {

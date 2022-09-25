@@ -10,10 +10,8 @@ const ButtonStyled = styled.div`
   gap: 10px;
 
   position: absolute;
-  width: 295px;
+  width: 200px;
   height: 89px;
-  left: 1269px;
-  top: 748px;
 
   background: radial-gradient(
         63.11% 63.11% at 31.97% 19.67%,
