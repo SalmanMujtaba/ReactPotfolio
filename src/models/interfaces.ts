@@ -32,6 +32,7 @@ export interface InterfaceIcon extends ICommon {
   alt?: string;
   icon: string;
   iconType?: string;
+  className?: string;
 }
 
 export interface IButton extends ICommon {

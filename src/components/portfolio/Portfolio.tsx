@@ -10,7 +10,7 @@ const PortfolioStyled = styled.main``;
 
 const Container = styled.div`
   &.app-container {
-    width: min(100%, 1280px);
+    width: min(100%, var(--max-content-width));
     margin: 0 auto;
     /* padding-inline: 20px;
     margin-block: 30px;

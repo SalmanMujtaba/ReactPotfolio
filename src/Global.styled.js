@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle `
   --card-width: 300px;
   --icon-size: 50px;
   --background-color: rgb(244, 244, 250);
-  --max-content-width: 1280px;
+  --max-content-width: 1110px;
   --white: white;
   --social-icon-size: 24px;
   --react-color: #61dafb;
@@ -19,6 +19,8 @@ export const GlobalStyles = createGlobalStyle `
   --heading-line-height: 48px;
   --heading-letter-spacing: 5px;
   --heading-font-weight: 500;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
 }
 
 h1 {
@@ -45,6 +47,7 @@ h2, h3, h4, h5 {
 p {
   font-size: clamp(14px, 1.25vw, 1.25rem);
   line-height: 24px;
+  font-weight: 400;
 }
 
 .flex {
@@ -57,6 +60,22 @@ p {
 
 .fw-400 {
   font-weight: var(--subheading-font-weight);
+}
+
+.column-heading {
+  font-size: 28px;
+}
+
+.link-icon-animate {
+  img {
+    transition: transform 0.2s linear;
+    fill: red;
+  }
+  &:hover {
+    img {
+      transform: translateX(10px);
+    }
+  }
 }
 
 figcaption {

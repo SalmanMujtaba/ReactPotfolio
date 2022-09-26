@@ -23,7 +23,7 @@ const Areas = () => {
         <AreaItem type={AppConstants.get("REACT_LABEL")!}></AreaItem>
         <AreaItem type={AppConstants.get("NEST_LABEL")!}></AreaItem>
         <AreaItem type={AppConstants.get("DATABASE_LABEL")!}></AreaItem>
-        <AreaItem type={AppConstants.get("CSS_LABEL")!}></AreaItem>
+        <AreaItem type={AppConstants.get("CSS_LOGO_LABEL")!}></AreaItem>
         <AreaItem type={AppConstants.get("HTML_LABEL")!}></AreaItem>
         <AreaItem type={AppConstants.get("NODE_LABEL")!}></AreaItem>
       </div>

@@ -21,16 +21,22 @@ const AppConstants = new Map([
   ["TWITTER_LABEL", "Twitter"],
   ["INSTAGRAM_LABEL", "Instagram"],
   ["DATABASE_LABEL", "Database"],
-  ["CSS_LABEL", "CSS"],
+  ["CSS_LOGO_LABEL", "CSS"],
   ["GEAR_LABEL", "Gear"],
   ["ALBUM_SEARCH_IMG", "AlbumSearch"],
   ["ALBUM_SEARCH_IMG_MOBILE", "AlbumSearchMobile"],
   ["VERCEL_LABEL", "Vercel"],
-  ["SCSS_LABEL", "SCSS"],
+  ["SCSS_LOGO_LABEL", "SCSS"],
   ["KARMA_LABEL", "Karma"],
   ["GITHUB_LABEL", "GitHub"],
   ["API_LABEL", "API"],
-  ["TS_LABEL", "Typescript"]
+  ["TS_LABEL", "Typescript"],
+  ["GIHUB_VIDEO", "GithubVideo"],
+  ["STAR_ICON_LABEL", "Star"],
+  ["BOLT_ICON_LABEL", "Bolt"],
+  ["LINK_ICON_LABEL", "Link"],
+  ["CODE_ICON_LABEL", "Code"],
+  ["RIGHT_ICON_LABEL", "Right"],
 
 ]
 );

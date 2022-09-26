@@ -26,7 +26,6 @@ const AlbumStyled = styled.div`
   }
   .album__content {
     width: min(500px, 100%);
-    font-weight: 300;
   }
 `;
 const AlbumSearch = () => {
@@ -62,7 +61,7 @@ const AlbumSearch = () => {
           <ul className="feature-list">
             <li>
               <p>
-                The app can be accessed from{" "}
+                The app is deployed in Vercel and can be viewed{" "}
                 <Link href="https://album-search.vercel.app/user/2/albums">
                   here
                 </Link>
@@ -87,7 +86,14 @@ const AlbumSearch = () => {
                 experience.
               </p>
             </li>
-
+            <li>
+              <p>
+                Take me to the source{" "}
+                <Link href="https://github.com/SalmanMujtaba/album-search">
+                  code.
+                </Link>
+              </p>
+            </li>
             <li>
               <p>Images are lazy loaded.</p>
             </li>

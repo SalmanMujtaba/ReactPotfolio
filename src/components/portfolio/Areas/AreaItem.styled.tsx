@@ -85,9 +85,9 @@ const AreaItem: React.FC<{ className?: string; type: string }> = (props) => {
           </p>
         </>
       )}
-      {props.type === AppConstants.get("CSS_LABEL") && (
+      {props.type === AppConstants.get("CSS_LOGO_LABEL") && (
         <>
-          <Icon icon={AppConstants.get("CSS_LABEL")!}></Icon>
+          <Icon icon={AppConstants.get("CSS_LOGO_LABEL")!}></Icon>
           <h4>CSS</h4>
           <p>
             I ❤️ working with CSS. I keep coming back to vanilla CSS for the

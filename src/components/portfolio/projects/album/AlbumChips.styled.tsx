@@ -28,8 +28,8 @@ const AlbumChips: React.FC<{ className?: string }> = (props) => {
       ></Chips>
       <Chips
         className="album__chips--item"
-        icon={AppConstants.get("SCSS_LABEL")!}
-        text={AppConstants.get("SCSS_LABEL")!}
+        icon={AppConstants.get("SCSS_LOGO_LABEL")!}
+        text={AppConstants.get("SCSS_LOGO_LABEL")!}
       ></Chips>
       <Chips
         className="album__chips--item"

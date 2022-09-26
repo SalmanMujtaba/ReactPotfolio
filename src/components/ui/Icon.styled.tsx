@@ -2,6 +2,8 @@ import AppConstants from "src/constants/app-constants";
 import { InterfaceIcon } from "src/models/interfaces";
 import angularLogo from "../../assets/icons/angular-logo.svg";
 import apiLogo from "../../assets/icons/api-logo.svg";
+import boltIcon from "../../assets/icons/bolt-icon.svg";
+import codeIcon from "../../assets/icons/code-icon.svg";
 import cssLogo from "../../assets/icons/css3-logo.svg";
 import dbLogo from "../../assets/icons/database-icon.png";
 import facebookLogo from "../../assets/icons/facebook-logo.svg";
@@ -11,13 +13,16 @@ import htmlLogo from "../../assets/icons/html-logo.svg";
 import instaLogo from "../../assets/icons/insta-logo.svg";
 import javascriptLogo from "../../assets/icons/javascript-logo.svg";
 import karmaLogo from "../../assets/icons/karma-logo.svg";
+import linkIcon from "../../assets/icons/links-icon.svg";
 import linkedinLogo from "../../assets/icons/inkedin-logo.svg";
 import materialLogo from "../../assets/icons/angular-material-logo.svg";
 import nestLogo from "../../assets/icons/nestjs-logo.svg";
 import nextjsLogo from "../../assets/icons/next-js-logo.svg";
 import nodeLogo from "../../assets/icons/icons8-node-js.svg";
 import reactLogo from "../../assets/icons/react-logo.svg";
+import rightIcon from "../../assets/images/right-arrow-svgrepo-com.svg";
 import scssLogo from "../../assets/icons/sass-logo.svg";
+import starIcon from "../../assets/icons/star-icon.svg";
 import styled from "styled-components";
 import tsLogo from "../../assets/icons/ts-logo.svg";
 import twitterLogo from "../../assets/icons/twitter-logo.svg";
@@ -49,7 +54,7 @@ const getIcon = (type: string) => {
       return nestLogo;
     case AppConstants.get("DATABASE_LABEL"):
       return dbLogo;
-    case AppConstants.get("CSS_LABEL"):
+    case AppConstants.get("CSS_LOGO_LABEL"):
       return cssLogo;
     case AppConstants.get("HTML_LABEL"):
       return htmlLogo;
@@ -59,7 +64,7 @@ const getIcon = (type: string) => {
       return materialLogo;
     case AppConstants.get("VERCEL_LABEL"):
       return vercelLogo;
-    case AppConstants.get("SCSS_LABEL"):
+    case AppConstants.get("SCSS_LOGO_LABEL"):
       return scssLogo;
     case AppConstants.get("KARMA_LABEL"):
       return karmaLogo;
@@ -67,10 +72,20 @@ const getIcon = (type: string) => {
       return apiLogo;
     case AppConstants.get("TS_LABEL"):
       return tsLogo;
+    case AppConstants.get("STAR_ICON_LABEL"):
+      return starIcon;
+    case AppConstants.get("BOLT_ICON_LABEL"):
+      return boltIcon;
+    case AppConstants.get("LINK_ICON_LABEL"):
+      return linkIcon;
+    case AppConstants.get("CODE_ICON_LABEL"):
+      return codeIcon;
+    case AppConstants.get("RIGHT_ICON_LABEL"):
+      return rightIcon;
   }
 };
 
-const IconStyled = styled.img<{ iconType?: string }>`
+const IconStyled = styled.img`
   height: 48px;
   width: 48px;
   object-fit: contain;
@@ -83,7 +98,6 @@ const Icon: React.FC<InterfaceIcon> = (props) => {
   return (
     <IconStyled
       loading="lazy"
-      iconType={props?.iconType}
       className={props.className}
       src={src}
       alt={props.alt || props.icon}
